@@ -31,7 +31,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+cloudinary.config( 
+  cloud_name = "moringa-chit-fund-private-limited", 
+  api_key = "177778488814987", 
+  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
+)
 # Application definition
 
 INSTALLED_APPS = [
