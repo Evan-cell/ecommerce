@@ -15,7 +15,7 @@ class Product(models.Model):
     name =models.CharField(max_length=200, null=True)
     price = models.FloatField()
     digital = models.BooleanField(default=False, null=True, blank=True)    
-    image = CloudinaryField('image')
+    image = CloudinaryField('image', default='image')
     def __str__(self):
         return self.name
     

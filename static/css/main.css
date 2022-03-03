@@ -26,11 +26,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bg-dark{
-	background-color: #4f868c!important;
+	background-color: #313636!important;
 }
 .navbar-brand > img{
     width: 40px;
     height: 32px;
+	border-radius: 10px;
 }
 
 #cart-icon{
