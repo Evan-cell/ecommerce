@@ -15,3 +15,15 @@ def checkout(request):
 def home(request):
     context = {}
     return render(request, 'home/home.html', context)
+def blog(request):
+    context = {}
+    return render(request, 'home/blog.html', context)
+def news(request):
+    context = {}
+    return render(request, 'home/news.html', context)
+def contact(request):
+    context = {}
+    return render(request, 'home/contact.html', context)
+def about(request):
+    context = {}
+    return render(request, 'home/about.html', context)
