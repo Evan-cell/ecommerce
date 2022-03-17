@@ -582,23 +582,32 @@
       </section>
       <!-- /section ends-->
       <!-- section -->
+      <style>
+         #callout {
+            background-image: url("{% static 'img2/slider/fog.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+         }
+      </style>
       <section id="callout" class=" container-fluid bg-fixed">
          <div class="container">
             <!-- row -->
             <div class="row">
                <div class="col-lg-6 p-0" data-start="right: 50%;" data-center="right:-5%;">
                   <!-- image  -->
-                  <img src="img2/call-to-action/calltoactionbg.jpg" class="img-fluid img-rounded" alt="">
+                  <img src="{% static 'img2/slider/solar1.jpg' %}" class="img-fluid img-rounded" alt="" style="opacity: 10px;">
                </div>
                <!-- text box  -->
                <div class="col-lg-6 bg-secondary p-5 justify-content-center align-self-center" data-start="left: 50%;"
                   data-center="left:-5%;">
                   <div class="text-light justify-content-center align-self-center">
-                     <h3>Reach Us Today</h3>
-                     <p>Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate
-                        at, tempus vi tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.</p>
-                     <a href="contact-us.html" class="btn btn-tertiary">Contact us</a>
+                     <h3>Get in Touch</h3>
+                     <p>Adili Solar Hubs Limited
+                        <br>
+                        info@adilies.com</p>
+                     <a href="/contact" class="btn btn-tertiary">Contact us</a>
                   </div>
                   <!-- /text-light  -->
                </div>
