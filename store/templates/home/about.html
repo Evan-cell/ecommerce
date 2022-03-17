@@ -1,4 +1,272 @@
 {% extends 'home/base.html' %}
 {% load static %}
 {% block content %}
+ <!-- page wrapper starts -->
+ <style>
+    .jumbotron {
+        background: url("{% static 'img2/slider/tur3.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        margin-bottom: 0px;
+        background-position:center top;
+    }
+    .jumbotron .breadcrumb {
+        max-width: 400px;
+        border-radius: 0px;
+    }
+    /* jumbotron */
+	.jumbotron {
+		height: 200px;
+	}
+    @media (max-width: 1200px) {
+        .top-bar .contact-details li {
+            padding: 0px 0px;
+        }
+        #not-found {
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+        }
+        .counter {
+            margin-bottom: 20px;
+        }
+        /* Jumbotron */
+        .jumbotron {
+            min-height: 250px;
+            background-size: cover!important;
+            background-attachment: scroll;
+        }
+    @media (min-width: 1500px) {
+        .jumbotron {
+            height: 280px;
+        }
+        .jumbo-heading {
+            margin-top: 140px;
+        }
+        .slider-divider {
+            margin-top: -100px;
+        }
+    }
+    
+    .jumbo-heading {
+        margin-bottom: 0px;
+        text-align: left;
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 40px;
+        margin-top: 70px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .jumbo-heading h1 {
+        color: #fff;
+        font-size: 2.5em;
+    }
+ </style>
+ <div id="page-wrapper">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- jumbo-heading -->
+            <div class="jumbo-heading" data-aos="fade-down">
+                <h1>About Us</h1>
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About us</li>
+                    </ol>
+                </nav>
+                <!-- /breadcrumb -->
+            </div>
+            <!-- /jumbo-heading -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /jumbotron -->
+    <!-- ==== Page Content ==== -->
+    <div class="page">
+        <div class="container block-padding">
+            <!--row -->
+            <div class="row">
+                <!-- /col-lg-->
+                <div class="col-lg-5">
+                    <img src="{% static 'img2/slider/about.jpg' %}" class="img-fluid blob" alt="">
+                    <!-- ornament starts-->
+                    <div class="ornament-bubbles" data-aos="fade-right"></div>
+                </div>
+                <div class="col-lg-7">
+                    <h3>Who we are </h3>
+                    <p class="h7 mt-3 mb-4">your child will develop self-esteem, independence and language</p>
+                    <p>Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra
+                        facilisis.
+                        Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed
+                        feugiat.
+                        Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem
+                        ipsum
+                        dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+                    </p>
+                    <ul class="custom pl-0">
+                        <li>Over 30 Qualified professionals</li>
+                        <li>We offer you our quality services since 2002</li>
+                        <li>Fun and educational activities in our daily plan</li>
+                    </ul>
+                    <!-- /custom-ul-->
+                </div>
+            </div>
+            <div class="row mt-5">
+                <!-- notepad -->
+                <div class="col-lg-12">
+                    <div class="notepad mt-5" data-aos="zoom-out">
+                        <div class="row">
+                            <!-- /col-lg-->
+                            <div class="col-lg-8">
+                                <h4 class="mt-3">Our Classes</h4>
+                                <p class="res-margin">Maecenas at arcu risus. Donec commodo sodales ex, scelerisque
+                                    laoreet
+                                    nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a
+                                    dolor
+                                    placerat, nec elementum ipsum convall.</p>
+                                <p>Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu
+                                    risus
+                                    scelerisque laoree. arcu risus onec comm nec elementum ipsum convall.</p>
+                                <a href="./contact-us.html" class="btn btn-tertiary">Contact Us</a>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="img/about/about3.jpg" class="img-fluid rounded rotate1" alt="">
+                                <!-- ornament starts-->
+                                <div class="ornament-rainbow" data-aos="zoom-out"></div>
+                            </div>
+                            <!-- /col-lg-->
+                        </div>
+                        <!-- /row -->
+                    </div>
+                    <!-- /notepad -->
+                </div>
+                <!-- /col-lg-->
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-5">
+                    <img src="img/about/about1.jpg" class="img-fluid blob" alt="">
+                    <!-- ornament starts-->
+                    <div class="ornament-bubbles" data-aos="fade-right"></div>
+                </div>
+                <div class="col-lg-7">
+                    <h3>Our Staff </h3>
+                    <p class="h7 mt-3 mb-4">your child will develop self-esteem, independence and language</p>
+                    <p>Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra
+                        facilisis.
+                        Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed
+                        feugiat.
+                        Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem
+                        ipsum
+                        dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+                    </p>
+                    <ul class="custom pl-0">
+                        <li>Over 30 Qualified professionals</li>
+                        <li>We offer you our quality services since 2002</li>
+                        <li>Fun and educational activities in our daily plan</li>
+                    </ul>
+                    <!-- /custom-ul-->
+                </div>
+            </div>
+            <!-- /row -->
+            <div class="row mt-5">
+                <div class="col-lg-7">
+                    <h3>Our Kids </h3>
+                    <p class="h7 mt-3 mb-4">your child will develop self-esteem, independence and language</p>
+                    <p>Etiam vestibulum sit amet nulla vel ornare. Vestibulum vitae turpis ac sapien pharetra
+                        facilisis.
+                        Curabitur non libero justo. Suspendisse at ultrices velit. Quisque aliquet quis nibh sed
+                        feugiat.
+                        Curabitur et quam felis. Nulla rhoncus laoreet dolor, et vestibulum sem consectetur a. Lorem
+                        ipsum
+                        dolor sit amet, consectetur adipiscing elit. Quisque tincidunt turpis ut sagittis tempor.
+                    </p>
+                    <ul class="custom pl-0">
+                        <li>Over 30 Qualified professionals</li>
+                        <li>We offer you our quality services since 2002</li>
+                        <li>Fun and educational activities in our daily plan</li>
+                    </ul>
+                    <!-- /custom-ul-->
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/about/about1.jpg" class="img-fluid blob" alt="">
+                    <!-- ornament starts-->
+                    <div class="ornament-bubbles" data-aos="fade-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page -->
+</div>
+<!--/ page-wrapper -->
+<div id="footer" class="footer-1 1-footer">
+    <svg version="1.1" id="footer-divider" class="secondary" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1440 126" xml:space="preserve"
+        preserveAspectRatio="none slice">
+        <path class="st0" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z" />
+    </svg>
+    <!-- ==== footer ==== -->
+    <footer class="bg-secondary text-light">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!--/ col-lg -->
+                <div class="col-lg-4 text-center res-margin">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-1"><i class="fas fa-phone margin-icon "></i>(123) 456-789</li>
+                        <li class="mb-1"><i class="fas fa-envelope margin-icon"></i><a
+                                href="mailto:email@yoursite.com">email@yoursite.com</a></li>
+                        <li><i class="fas fa-map-marker margin-icon"></i>Street Name 123 - New York </li>
+                    </ul>
+                    <!--/ul -->
+                    <!-- Start Social Links -->
+                    <ul class="social-list text-center list-inline mt-2">
+                        <li class="list-inline-item"><a title="Facebook" href="#"><i
+                                    class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a title="Twitter" href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a title="Instagram" href="#"><i
+                                    class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <!-- /End Social Links -->
+                </div>
+                <!--/ col-lg -->
+                <div class="col-lg-4 text-center">
+                    <h5>Working Hours</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-1">Monday to Friday</li>
+                        <li class="mb-1">Open from 9am - 6pm</li>
+                        <li class="mb-1">Holidays - Closed</li>
+                        <li>Weekends - Closed</li>
+                    </ul>
+                    <!--/ul -->
+                </div>
+                <!--/ col-lg -->
+            </div>
+            <!--/ row-->
+            <hr />
+            <div class="row">
+                <div class="credits col-sm-12">
+                    <p>Copyright 2022 / Designed by <a href="#">Developer Wilson</a></p>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/ container -->
+        <!-- Go To Top Link -->
+        <div class="page-scroll hidden-sm hidden-xs">
+            <a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        </div>
+        <!--/page-scroll-->
+    </footer>
+    <!--/ footer-->
+</div>
+
 {%endblock%}

@@ -2802,7 +2802,7 @@ ul.checkmark li:before {
 /* Jumbotron */
 
 .jumbotron {
-	background: url("../img/jumbotron.jpg");
+	background: url("{% static 'img2/slider/shiro2.jpg' %}");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: contain;

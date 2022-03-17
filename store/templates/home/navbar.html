@@ -1,32 +1,104 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="https://static.wixstatic.com/media/152bac_cf92267ae2d44977a3784d104504263e~mv2.png/v1/fill/w_92,h_59,al_c,usm_0.66_1.00_0.01,enc_auto/Logo%20transparent%20background.png" alt="" width="50" height="34">
-          </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="/news">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="/contact">Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="/blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-white" href="{% url 'store' %}">Shop</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+<body id="top">
+  <!-- Preloader -->
+  <div id="preloader">
+     <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+           <div class="preloader-logo">
+              <!-- spinner -->
+              <div class="spinner">
+                 <div class="dot1"></div>
+                 <div class="dot2"></div>
+              </div>
+           </div>
+           <!--/preloader logo -->
+        </div>
+        <!--/row -->
+     </div>
+     <!--/container -->
+  </div>
+  <!--/Preloader ends -->
+  <nav id="main-nav" class="navbar-expand-xl fixed-top">
+     <div class="row">
+        <!-- Start Top Bar -->
+        <div class="container-fluid top-bar">
+           <div class="container">
+              <div class="row">
+                 <div class="col-md-12">
+                    <!-- Start Contact Info -->
+                    <ul class="contact-details float-left">
+                       <li><i class="fa fa-map-marker"></i>Eldoret</li>
+                       <li><i class="fa fa-envelope"></i><a href="kg@adilies.com">kg@adilies.com</a></li>
+                       <li><i class="fa fa-phone"></i>+254726133750</li>
+                    </ul>
+                    <!-- End Contact Info -->
+                    <!-- Start Social Links -->
+                    <ul class="social-list float-right list-inline">
+                       <li class="list-inline-item"><a title="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                       </li>
+                       <li class="list-inline-item"><a title="Twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                       <li class="list-inline-item"><a title="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+                       </li>
+                    </ul>
+                    <!-- /End Social Links -->
+                 </div>
+                 <!-- col-md-12 -->
+              </div>
+              <!-- /row -->
+           </div>
+           <!-- /container -->
+        </div>
+        <!-- End Top bar -->
+        <!-- Navbar Starts -->
+        <div class="navbar container-fluid">
+           <div class="container ">
+              <!-- logo -->
+              <a class="nav-brand" href="/">
+               <img src="https://static.wixstatic.com/media/152bac_cf92267ae2d44977a3784d104504263e~mv2.png/v1/fill/w_92,h_59,al_c,usm_0.66_1.00_0.01,enc_auto/Logo%20transparent%20background.png" alt="" width="90" height="74">
+              </a>
+              <!-- Navbar toggler -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggle-icon">
+                    <i class="fas fa-bars"></i>
+                 </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                 <ul class="navbar-nav ml-auto">
+                    <!-- menu item -->
+                    <li class="nav-item home-menu active">
+                       <a class="nav-link" href="{% url 'home' %}">Home
+                       </a>
+                    </li>
+                    <!-- menu item -->
+                    <li class="nav-item home-menu">
+                       <a class="nav-link" href="/about">About
+                       </a>
+                    </li>
+                    <!-- menu item -->
+                    <li class="nav-item home-menu">
+                       <a class="nav-link" href="/contact">Contact
+                       </a>
+                    </li>
+                    <!-- menu item -->
+                    <li class="nav-item home-menu">
+                       <a class="nav-link" href="/blog">Blogs
+                       </a>
+                    </li>
+                    <!-- menu item -->
+                    <li class="nav-item home-menu">
+                       <a class="nav-link" href="{% url 'store' %}">Shop
+                       </a>
+                    </li>
+                 </ul>
+                 <!--/ul -->
+              </div>
+              <!--collapse -->
+           </div>
+           <!-- /container -->
+        </div>
+        <!-- /navbar -->
+     </div>
+     <!--/row -->
   </nav>
+  <!-- /nav -->
+</body>
