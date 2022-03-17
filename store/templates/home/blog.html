@@ -23,7 +23,69 @@
         <!-- /container -->
     </div>
     <!-- /jumbotron -->
+     <style>
+    .jumbotron {
+        background: url("{% static 'img2/slider/tur3.jpg' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        margin-bottom: 0px;
+        background-position:center top;
+    }
+    .jumbotron .breadcrumb {
+        max-width: 400px;
+        border-radius: 0px;
+    }
+    /* jumbotron */
+	.jumbotron {
+		height: 200px;
+	}
+    @media (max-width: 1200px) {
+        .top-bar .contact-details li {
+            padding: 0px 0px;
+        }
+        #not-found {
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+        }
+        .counter {
+            margin-bottom: 20px;
+        }
+        /* Jumbotron */
+        .jumbotron {
+            min-height: 250px;
+            background-size: cover!important;
+            background-attachment: scroll;
+        }
+    @media (min-width: 1500px) {
+        .jumbotron {
+            height: 280px;
+        }
+        .jumbo-heading {
+            margin-top: 140px;
+        }
+        .slider-divider {
+            margin-top: -100px;
+        }
+    }
     
+    .jumbo-heading {
+        margin-bottom: 0px;
+        text-align: left;
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px 40px;
+        margin-top: 70px;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .jumbo-heading h1 {
+        color: #fff;
+        font-size: 2.5em;
+    }
+ </style>
     <!-- ==== Page Content ==== -->
     <div id="blog-home" class="page">
         <div class="container">
