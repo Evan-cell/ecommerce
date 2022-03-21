@@ -102,7 +102,7 @@
                <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
                      <!-- menu item -->
-                     <li class="nav-item home-menu active">
+                     <li class="nav-item home-menu ">
                         <a class="nav-link" href="{% url 'home' %}">Home
                         </a>
                      </li>
@@ -230,7 +230,7 @@
                <div class="col-lg-7 ">
                   <h3>Our Mission</h3>
                   <p class="mt-4 res-margin">We develop, build, own and operate clean energy powered post harvest processing facilities that create a ready market for products harvested by rural communities. We also incorporate CSR projects that improve they quality of life such as access to potable water in such communities.</p>
-                  <a href="./contact-us.html" class="btn btn-primary ">Contact us</a>
+                  <a href="/about" class="btn btn-primary ">More about us</a>
                </div>
                <!-- /col-lg -->
             </div>
@@ -256,17 +256,17 @@
          <div class="container pb-5">
             <!-- section heading -->
             <div class="section-heading text-center text-light" data-aos="fade-down">
-               <h2>Our Services</h2>
-               <p class="subtitle">what we offer</p>
+               <h2>SDG'S</h2>
+               <p class="subtitle">That we offer</p>
             </div>
             <!-- /section heading -->
             <div class="carousel-3items owl-carousel owl-theme col-lg-12">
                <!-- service 1  -->
-               <div class="serviceBox2">
+               {% comment %} <div class="serviceBox2">
                   <!-- service icon -->
                   <div class="service-icon">
                      <a>
-                        <img src="{% static 'img2/gallery/solar1.png' %}" alt="" class="blob img-fluid">
+                        <img src="{% static 'img2/slider/tur3.jpg' %}" alt="" class="blob img-fluid">
                      </a>
                   </div>
                   <!-- service content -->
@@ -275,34 +275,30 @@
                         <h4 class="service-head">Solar installation</h4>
                      </a>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo
-                        sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam
-                        rhoncus.
+                        We do solar installation
                      </p>
 
                   </div>
-               </div>
+               </div> {% endcomment %}
                <!-- service 2  -->
-               <div class="serviceBox2">
+               {% comment %} <div class="serviceBox2">
                   <!-- service icon -->
                   <div class="service-icon">
                      <a>
-                        <img src="{% static 'img2/gallery/solar2.png' %}" alt="" class="blob2 img-fluid">
+                        <img src="{% static 'img2/slider/tur3.jpg' %}" alt="" class="blob2 img-fluid">
                      </a>
                   </div>
                   <!-- service content -->
                   <div class="service-content">
                      <a>
-                        <h4 class="service-head">fishery</h4>
+                        <h4 class="service-head">We sell Fish</h4>
                      </a>
                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit integer dictum malesuada Donec commodo
-                        sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus Etiam
-                        rhoncus.
+                        You can visit our store  to purchase fish of your liking
                      </p>
 
                   </div>
-               </div>
+               </div> {% endcomment %}
                
                
                
@@ -313,54 +309,35 @@
       </section>
       <!-- /section ends -->
       <!-- Section  -->
-      <section id="counter-section" class="container-fluid counter-calltoaction bg-fixed overlay"
-         data-100-bottom="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;">
-         <div id="counter" class="container">
-            <div class="row col-lg-10 offset-lg-1">
-               <!-- Counter -->
-               <div class="col-xl-4 col-md-4">
-                  <div class="counter">
-                     <div class="counter-wrapper bg-primary">
-                        <i class="counter-icon flaticon-teacher"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="30">0</div>
-                        <h3 class="title">Quality Education</h3>
-                     </div>
-                  </div>
-                  <!-- /counter -->
-               </div>
-               <!-- /col-lg -->
-               <!-- Counter -->
-               <div class="col-xl-4 col-md-4">
-                  <div class="counter">
-                     <div class="counter-wrapper bg-secondary">
-                        <i class="counter-icon  flaticon-family"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="74">0</div>
-                        <h3 class="title">No poverty</h3>
-                     </div>
-                  </div>
-                  <!-- /counter -->
-               </div>
-               <!-- /col-lg -->
-               <!-- Counter -->
-               <div class="col-xl-4 col-md-4">
-                  <div class="counter">
-                     <div class="counter-wrapper bg-tertiary">
-                        <i class="counter-icon flaticon-children"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="104">0</div>
-                        <h3 class="title">Gender Equality</h3>
-                     </div>
-                  </div>
-                  <!-- /counter -->
-               </div>
-               <!-- /col-lg -->
-            </div>
-            <!-- /row -->
+      <br>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+         <div class="col">
+           <div class="card">
+             <img src="{% static 'img2/slider/water.png' %}" class="card-img-top" alt="...">
+             
+           </div>
          </div>
-         <!-- /container -->
-      </section>
+         <br>
+         <div class="col">
+           <div class="card">
+             <img src="{% static 'img2/slider/Energy.png' %}" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <br>
+         <div class="col">
+           <div class="card">
+             <img src="{% static 'img2/slider/fish.png' %}" class="card-img-top" alt="...">
+             
+           </div>
+         </div>
+         <style>
+            .col{
+               padding: 20px;
+            }
+         </style>
+         
+       </div>
       <!-- /section ends-->
       <!-- section-->
       <section id="team-home" class="container">
