@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'cloudinary',
+    'jazzmin',
 ]
 
 MIDDLEWARE = [
