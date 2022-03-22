@@ -16,8 +16,8 @@ def home(request):
     context = {}
     return render(request, 'home/home.html', context)
 def blog(request):
-    blog = BlogPost.objects.all()
-    context = {}
+    blogs = BlogPost.objects.all()
+    context = {"blogs": blogs}
     return render(request, 'home/blog.html', context)
 def news(request):
     context = {}
