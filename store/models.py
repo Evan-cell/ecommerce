@@ -46,3 +46,11 @@ class ShippingAddress(models.Model):
     
     def __str__(self):
         return self.address
+class BlogPost(models.Model):
+    title = models.CharField(max_length=150)
+    content = models.TextField(max_length=3000)
+    image = CloudinaryField('image')
+    post_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
