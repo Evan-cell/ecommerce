@@ -85,11 +85,13 @@
         color: #fff;
         font-size: 2.5em;
     }
- </style>
+</style>
+ 
     <!-- ==== Page Content ==== -->
     <div id="blog-home" class="page">
         <div class="container">
             <div class="row">
+                {%for blog in blogs%}
                 <!-- Blog Entries Column -->
                 <div class="col-lg-9 page-with-sidebar">
                     <div class="row">
@@ -99,7 +101,7 @@
                             <div class="blog-box">
                                 <!-- image -->
                                 <a href="blog-single.html">
-                                    <div class="image"><img src="img/blog/blogstyle2-main.jpg" alt="" /></div>
+                                    <div class="image"><img src="{{blog.image.url}}" alt="" /></div>
                                 </a>
                                 <!-- blog-box-caption -->
                                 <div class="blog-box-caption">
@@ -107,21 +109,16 @@
                                     <div class="date"><span class="day">22</span><span class="month">Dec</span>
                                     </div>
                                     <a href="blog-single.html">
-                                        <h4>Day Care 101: How to Choose the best Facilities</h4>
+                                        <h4>{{blog.title}}</h4>
                                     </a>
                                     <!-- /link -->
                                     <p>
-                                        Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas
-                                        at arcu
-                                        risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In
-                                        aliquet
-                                        magna nec lobortis...
+                                        {{blog.content}}
                                     </p>
                                 </div>
                                 <!-- blog-box-footer -->
                                 <div class="blog-box-footer">
-                                    <div class="author">Posted by<a href="#"><i class="fas fa-user"></i>Lauren
-                                            Smith</a></div>
+                                    <div class="author">Posted by<a href="#"><i class="fas fa-user"></i>{{blog.user}}</a></div>
                                     <div class="comments"><a href="blog-single.html"><i
                                                 class="fas fa-comment"></i>23</a>
                                     </div>
@@ -133,6 +130,7 @@
                                 <!-- /blog-box-footer -->
                             </div>
                             <!-- /blog-box -->
+                            {%endfor%}
                         </div>
                     </div>
                     <!-- /row -->

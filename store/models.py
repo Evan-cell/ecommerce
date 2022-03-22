@@ -50,6 +50,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=150)
     content = models.TextField(max_length=3000)
     image = CloudinaryField('image')
+    User = models.CharField(max_length=150)
     post_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
