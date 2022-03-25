@@ -10,7 +10,7 @@ def store(request):
     
 	if request.user.is_authenticated:
 		customer = request.user.customer
-		order, created = Order.objects.filter(customer=customer, complete=False)
+		order, created = Order.objects.get_or_create(customer=customer, complete=False)
 		items = order.orderitem_set.all()
 		cartItems = order.get_cart_items
 	else:
@@ -26,7 +26,7 @@ def cart(request):
     
 	if request.user.is_authenticated:
 		customer = request.user.customer
-		order, created = Order.objects.filter(customer=customer, complete=False)
+		order, created = Order.objects.get_or_create(customer=customer, complete=False)
 		items = order.orderitem_set.all()
 		cartItems = order.get_cart_items
 	else:
@@ -41,7 +41,7 @@ def cart(request):
 def checkout(request):
 	if request.user.is_authenticated:
 		customer = request.user.customer
-		order, created = Order.objects.filter(customer=customer, complete=False)
+		order, created = Order.objects.get_or_create(customer=customer, complete=False)
 		items = order.orderitem_set.all()
 		cartItems = order.get_cart_items
 	else:
@@ -63,7 +63,7 @@ def updateItem(request):
 
 	customer = request.user.customer
 	product = Product.objects.get(id=productId)
-	order, created = Order.objects.filter(customer=customer, complete=False)
+	order, created = Order.objects.get_or_create(customer=customer, complete=False)
 
 	orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
 

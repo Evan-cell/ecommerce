@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import django_heroku
+from decouple import config
+import dj_database_url
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
@@ -24,17 +27,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v(pfj4w!!fpl9+h8n_761xibz4%s_^2c01bkewuh%f3=+0*ag)'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-cloudinary.config( 
-  cloud_name = "moringa-chit-fund-private-limited", 
-  api_key = "177778488814987", 
-  api_secret = "_7SSmn6ASgdrXTjtRRIyT8gagEY" 
+cloudinary.config(
+    cloud_name=config('CD_NAME'),
+    api_key=config('CD_API'),
+    api_secret=config('CD_SECRET'),
 )
 # Application definition
 
@@ -87,8 +90,11 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
     }
 }
 
@@ -117,13 +123,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
+
+django_heroku.settings(locals())
 
 
 # Static files (CSS, JavaScript, Images)
