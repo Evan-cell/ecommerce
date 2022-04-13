@@ -63,7 +63,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+# SMTP CONFIGURATIONS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'malcomchege0582@gmail.com'
+EMAIL_HOST_PASSWORD = 'malcomiz0582'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
 ROOT_URLCONF = 'ecommerce.urls'
 
 TEMPLATES = [

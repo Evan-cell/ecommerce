@@ -4,6 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from .models import *
 import json
+from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 def store(request):
@@ -90,8 +92,16 @@ def news(request):
     context = {}
     return render(request, 'home/news.html', context)
 def contact(request):
-    context = {}
-    return render(request, 'home/contact.html', context)
+    context={}
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        email = request.POST.get('email')
+        send_mail(subject, message, settings.EMAIL_HOST_USER,
+                  [email], fail_silently=False)
+        return render(request, 'home/email_sent.html', {'email': email}, context)
+    return render(request, 'home/contact.html')
+	
 def about(request):
     context = {}
     return render(request, 'home/about.html', context)
